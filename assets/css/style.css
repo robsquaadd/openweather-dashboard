@@ -1,0 +1,13 @@
+* {
+  margin: 0px;
+}
+
+header {
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+#search-section {
+  margin: 20px 10px;
+}

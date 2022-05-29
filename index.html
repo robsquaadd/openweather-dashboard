@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link href="./assets/css/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Weather Dashboard</h1>
+    </header>
+    <div class="row">
+      <div id="search-container" class="col-12 col-md-3 m-1">
+        <div id="search-section">
+          <input id="search-city" type="text" placeholder="city" />
+          <button id="search-btn" type="submit" title="save">Search</button>
+        </div>
+        <div id="search-history"></div>
+      </div>
+      <div id="weather-container" class="col-12 col-md-7 m-1">
+        <div
+          id="current-weather-section"
+          class="my-3 border border-5 border-primary rounded"
+        >
+          <h2>Current Weather</h2>
+          <h3 id="city-name"></h3>
+          <p id="temperature-element">
+            Temperature: <span id="temperature-value"></span>
+          </p>
+          <p id="humidity-element">
+            Humidity: <span id="humidity-value"></span>
+          </p>
+          <p id="windSpeed-element">
+            Wind Speed: <span id="windSpeed-value"></span>
+          </p>
+          <p id="uvIndex-element">UV Index: <span id="uvIndex-value"></span></p>
+        </div>
+        <div id="future-weather-section" class="row my-3">
+          <div
+            id="future-day-1"
+            class="future-card col-11 col-md-2 mx-auto my-1 bg-dark text-light rounded"
+          >
+            <p id="future-temperature-1"></p>
+            <p id="future-humidity-1"></p>
+            <p id="future-wind-speed-1"></p>
+          </div>
+          <div
+            id="future-day-2"
+            class="future-card col-11 col-md-2 mx-auto my-1 bg-dark text-light rounded"
+          >
+            <p id="future-temperature-2"></p>
+            <p id="future-humidity-2"></p>
+            <p id="future-wind-speed-2"></p>
+          </div>
+          <div
+            id="future-day-3"
+            class="future-card col-11 col-md-2 mx-auto my-1 bg-dark text-light rounded"
+          >
+            <p id="future-temperature-3"></p>
+            <p id="future-humidity-3"></p>
+            <p id="future-wind-speed-3"></p>
+          </div>
+          <div
+            id="future-day-4"
+            class="future-card col-11 col-md-2 mx-auto my-1 bg-dark text-light rounded"
+          >
+            <p id="future-temperature-4"></p>
+            <p id="future-humidity-4"></p>
+            <p id="future-wind-speed-4"></p>
+          </div>
+          <div
+            id="future-day-5"
+            class="future-card col-11 col-md-2 mx-auto my-1 bg-dark text-light rounded"
+          >
+            <p id="future-temperature-5"></p>
+            <p id="future-humidity-5"></p>
+            <p id="future-wind-speed-5"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
