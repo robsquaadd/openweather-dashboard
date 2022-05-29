@@ -45,12 +45,15 @@ const displayCurrentWeatherData = (city, data) => {
   cityNameEl.textContent = city.replace("-", " ");
   humidityEl.textContent = data.current.humidity;
   temperatureEl.textContent = convertTemptoFarenheit(data.current.temp);
-  if (data.current.uvi.parseFloat() < 4) {
+  if (parseFloat(data.current.uvi) < 4) {
     uvIndexEl.style.backgroundColor = "green";
   } else if (
-    data.current.uvi.parseFloat() >= 4 &&
-    data.current.uvi.parseFloat() < 8
+    parseFloat(data.current.uvi) >= 4 &&
+    parseFloat(data.current.uvi) < 8
   ) {
+    uvIndexEl.style.backgroundColor = "yellow";
+  } else {
+    uvIndexEl.style.backgroundColor = "red";
   }
   uvIndexEl.textContent = data.current.uvi;
   windSpeedEl.textContent = data.current.wind_speed;
