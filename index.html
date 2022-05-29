@@ -16,20 +16,32 @@
       <h1>Weather Dashboard</h1>
     </header>
     <div class="row">
-      <div id="search-container" class="col-12 col-md-3 m-1">
+      <div id="search-container" class="col-12 col-md-2 m-1">
         <div id="search-section">
           <input id="search-city" type="text" placeholder="city" />
-          <button id="search-btn" type="submit" title="save">Search</button>
+          <button
+            id="search-btn"
+            type="submit"
+            title="save"
+            class="btn-primary my-1 w-100 rounded"
+          >
+            Search
+          </button>
         </div>
         <div id="search-history"></div>
       </div>
-      <div id="weather-container" class="col-12 col-md-7 m-1">
+      <div id="weather-container" class="col-12 col-md-9 m-1">
+        <h2>Current Weather</h2>
         <div
           id="current-weather-section"
-          class="my-3 border border-5 border-primary rounded"
+          class="my-3 border border-primary border-5 rounded px-5 py-1"
         >
-          <h2>Current Weather</h2>
           <h3 id="city-name"></h3>
+          <img
+            src="https://openweathermap.org/img/wn/10d.png"
+            alt="weather-icon"
+            id="current-weather-icon"
+          />
           <p id="temperature-element">
             Temperature: <span id="temperature-value"></span>
           </p>
@@ -46,6 +58,12 @@
             id="future-day-1"
             class="future-card col-11 col-md-2 mx-auto my-1 bg-dark text-light rounded"
           >
+            <h4 id="date-1"></h4>
+            <img
+              src="https://openweathermap.org/img/wn/10d.png"
+              alt="weather-icon"
+              id="future-weather-icon-1"
+            />
             <p id="future-temperature-1"></p>
             <p id="future-humidity-1"></p>
             <p id="future-wind-speed-1"></p>
@@ -54,6 +72,12 @@
             id="future-day-2"
             class="future-card col-11 col-md-2 mx-auto my-1 bg-dark text-light rounded"
           >
+            <h4 id="date-2"></h4>
+            <img
+              src="https://openweathermap.org/img/wn/10d.png"
+              alt="weather-icon"
+              id="future-weather-icon-2"
+            />
             <p id="future-temperature-2"></p>
             <p id="future-humidity-2"></p>
             <p id="future-wind-speed-2"></p>
@@ -62,6 +86,12 @@
             id="future-day-3"
             class="future-card col-11 col-md-2 mx-auto my-1 bg-dark text-light rounded"
           >
+            <h4 id="date-3"></h4>
+            <img
+              src="https://openweathermap.org/img/wn/10d.png"
+              alt="weather-icon"
+              id="future-weather-icon-3"
+            />
             <p id="future-temperature-3"></p>
             <p id="future-humidity-3"></p>
             <p id="future-wind-speed-3"></p>
@@ -70,6 +100,12 @@
             id="future-day-4"
             class="future-card col-11 col-md-2 mx-auto my-1 bg-dark text-light rounded"
           >
+            <h4 id="date-4"></h4>
+            <img
+              src="https://openweathermap.org/img/wn/10d.png"
+              alt="weather-icon"
+              id="future-weather-icon-4"
+            />
             <p id="future-temperature-4"></p>
             <p id="future-humidity-4"></p>
             <p id="future-wind-speed-4"></p>
@@ -78,6 +114,12 @@
             id="future-day-5"
             class="future-card col-11 col-md-2 mx-auto my-1 bg-dark text-light rounded"
           >
+            <h4 id="date-5"></h4>
+            <img
+              src="https://openweathermap.org/img/wn/10d.png"
+              alt="weather-icon"
+              id="future-weather-icon-5"
+            />
             <p id="future-temperature-5"></p>
             <p id="future-humidity-5"></p>
             <p id="future-wind-speed-5"></p>
@@ -85,6 +127,8 @@
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

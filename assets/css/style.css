@@ -11,3 +11,7 @@ header {
 #search-section {
   margin: 20px 10px;
 }
+
+#weather-container {
+  display: none;
+}
