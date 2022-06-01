@@ -115,17 +115,20 @@ const searchCity = async (formattedCity) => {
 
 const reloadButtons = () => {
   var historyArray = JSON.parse(localStorage.getItem("searchHistory"));
-  for (i = historyArray.length - 1; i >= 0; i--) {
-    var historyButtonEl = document.createElement("button");
-    historyButtonEl.classList = "history-button btn-primary my-1 w-100 rounded";
-    historyButtonEl.textContent = historyArray[i];
-    historyButtonEl.addEventListener("click", (e) => {
-      var buttonClicked = e.target;
-      var city = buttonClicked.textContent;
-      var formattedCity = city.replace(" ", "-");
-      searchCity(formattedCity);
-    });
-    searchHistoryEl.appendChild(historyButtonEl);
+  if (historyArray != null) {
+    for (i = historyArray.length - 1; i >= 0; i--) {
+      var historyButtonEl = document.createElement("button");
+      historyButtonEl.classList =
+        "history-button btn-primary my-1 w-100 rounded";
+      historyButtonEl.textContent = historyArray[i];
+      historyButtonEl.addEventListener("click", (e) => {
+        var buttonClicked = e.target;
+        var city = buttonClicked.textContent;
+        var formattedCity = city.replace(" ", "-");
+        searchCity(formattedCity);
+      });
+      searchHistoryEl.appendChild(historyButtonEl);
+    }
   }
 };
 
