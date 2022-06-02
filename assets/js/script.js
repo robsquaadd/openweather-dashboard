@@ -115,7 +115,7 @@ const searchCity = async (formattedCity) => {
 
 const reloadButtons = () => {
   var historyArray = JSON.parse(localStorage.getItem("searchHistory"));
-  if (historyArray != null) {
+  if (historyArray != null || historyArray != undefined) {
     for (i = historyArray.length - 1; i >= 0; i--) {
       var historyButtonEl = document.createElement("button");
       historyButtonEl.classList =
